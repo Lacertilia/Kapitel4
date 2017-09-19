@@ -20,7 +20,7 @@ public class Kapitel4{
 			product = product * 0.9;
 			JOptionPane.showMessageDialog(null, "Det kostar ungef" + a2 + "r " + product + " kr per m" + a1 + "nad.");
 		}*/
-		String OTicket = JOptionPane.showInputDialog(null, "Hur mycket kostar det att gymma en g" + a1 + "ng?");
+		/*String OTicket = JOptionPane.showInputDialog(null, "Hur mycket kostar det att gymma en g" + a1 + "ng?");
 		int OTW = Integer.parseInt(OTicket);
 		String YTicket = JOptionPane.showInputDialog(null, "Hur mycker kostar ett " + a1 + "rskort?");
 		int YTW = Integer.parseInt(YTicket);
@@ -31,6 +31,23 @@ public class Kapitel4{
 			JOptionPane.showMessageDialog(null, "Det l" + o1 + "nar sig att ta ett " + a1 + "rskort!");
 		}else {
 			JOptionPane.showMessageDialog(null, "Det l" + o1 + "nar sig inte att ta ett " + a1 + "rskort!");
+		}*/
+		String Sbetyg = JOptionPane.showInputDialog(null, "Hur m" + a1 + "nga po" + a2 + "ng fick personen?");
+		int betyg = Integer.parseInt(Sbetyg);
+		if(betyg > 50){
+			JOptionPane.showMessageDialog(null, "Om" + o1 + "jligt!");
+		}else if(betyg >=45){
+			JOptionPane.showMessageDialog(null, "Personen fick ett A!");
+		}else if(betyg >=40){
+			JOptionPane.showMessageDialog(null, "Personen fick ett B!");
+		}else if(betyg >=35){
+			JOptionPane.showMessageDialog(null, "Personen fick ett C!");
+		}else if(betyg >=30){
+			JOptionPane.showMessageDialog(null, "Personen fick ett D!");
+		}else if(betyg >=25){
+			JOptionPane.showMessageDialog(null, "Personen fick ett E!");
+		}else {
+			JOptionPane.showMessageDialog(null, "Personen fick ett F!");
 		}
 	}
 }
