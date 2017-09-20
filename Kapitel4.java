@@ -49,7 +49,7 @@ public class Kapitel4{
 		}else {
 			JOptionPane.showMessageDialog(null, "Personen fick ett F!");
 		}*/
-		String ls = JOptionPane.showInputDialog(null, "Vilken l" + a2 + "ngd har paketet?");
+		/*String ls = JOptionPane.showInputDialog(null, "Vilken l" + a2 + "ngd har paketet?");
 		String bs = JOptionPane.showInputDialog(null, "Vilken bredd har paketet?");
 		String ts = JOptionPane.showInputDialog(null, "Vilken tjocklek har paketet?");
 		double ld = Double.parseDouble(ls);
@@ -59,6 +59,18 @@ public class Kapitel4{
 			JOptionPane.showMessageDialog(null, "M" + a1 + "tten OK");
 		}else {
 			JOptionPane.showMessageDialog(null, "Felaktiga m" + a1 + "tt.");
+		}*/
+		double min = Double.parseDouble(JOptionPane.showInputDialog(null, "Hur m" + a1 + "nga minuter pratade du i telefonen?"));
+		int button = JOptionPane.showConfirmDialog(null, "P" + a1 + "gick samtalet under dagtid?");
+		double price = 0;
+		if(button == 0){
+			price = 0.6 +  2.5 * min;
+		}else if(button == 1){
+			price = 0.6 + 0.55 * min;
+		}else {
+			JOptionPane.showMessageDialog(null, "Avbrutet!");
+			System.exit(1);
 		}
+		JOptionPane.showMessageDialog(null, "Kostnaden blev " + price + " kr!");
 	}
 }
