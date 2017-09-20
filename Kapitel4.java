@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.text.*;
 /*
 Rasmus Mattas
 Uppgifter Kapitel 4
@@ -73,7 +74,7 @@ public class Kapitel4{
 			System.exit(1);
 		}
 		JOptionPane.showMessageDialog(null, "Kostnaden blev " + price + " kr!");*/
-		String p1 = JOptionPane.showInputDialog(null, "Vad " + a2 + "r f" + o1 + "rsta personens personnummer?\n" +a1+a1+a1+a1+"mmdd");
+		/*String p1 = JOptionPane.showInputDialog(null, "Vad " + a2 + "r f" + o1 + "rsta personens personnummer?\n" +a1+a1+a1+a1+"mmdd");
 		String p2 = JOptionPane.showInputDialog(null, "Vad " + a2 + "r andra personens personnummer?\n" +a1+a1+a1+a1+"mmdd");
 		p1 = p1.substring(5);
 		p2 = p2.substring(5);
@@ -81,7 +82,17 @@ public class Kapitel4{
 			JOptionPane.showMessageDialog(null, "Ja, personerna fyller " + a1 + "r p" + a1 + " samma dag.");
 		}else {
 			JOptionPane.showMessageDialog(null, "Nej, personerna fyller inte " + a1 + "r p" + a1 + " samma dag.");
+		}*/
+		Collator n = Collator.getInstance();
+		n.setStrength(Collator.PRIMARY);
+		String n1 = JOptionPane.showInputDialog(null, "Vad heter f" + a1 + "rsta personen?\nEfternamn, F" + o1 + "rnamn");
+		String n2 = JOptionPane.showInputDialog(null, "Vad heter andra personen?\nEfternamn, F" + o1 + "rnamn");
+		if(n.compare(n1, n2) > 0){
+			JOptionPane.showMessageDialog(null, n2 + "\n" + n1);
+		}else if(n.compare(n1, n2) < 0){
+			JOptionPane.showMessageDialog(null, n1 + "\n" + n2);
+		}else {
+			JOptionPane.showMessageDialog(null, n1 + " och " + n2 + " kommer samtidigt i alfabetet.");
 		}
-
 	}
 }
