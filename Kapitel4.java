@@ -32,7 +32,7 @@ public class Kapitel4{
 		}else {
 			JOptionPane.showMessageDialog(null, "Det l" + o1 + "nar sig inte att ta ett " + a1 + "rskort!");
 		}*/
-		String Sbetyg = JOptionPane.showInputDialog(null, "Hur m" + a1 + "nga po" + a2 + "ng fick personen?");
+		/*String Sbetyg = JOptionPane.showInputDialog(null, "Hur m" + a1 + "nga po" + a2 + "ng fick personen?");
 		int betyg = Integer.parseInt(Sbetyg);
 		if(betyg > 50){
 			JOptionPane.showMessageDialog(null, "Om" + o1 + "jligt!");
@@ -48,6 +48,17 @@ public class Kapitel4{
 			JOptionPane.showMessageDialog(null, "Personen fick ett E!");
 		}else {
 			JOptionPane.showMessageDialog(null, "Personen fick ett F!");
+		}*/
+		String ls = JOptionPane.showInputDialog(null, "Vilken l" + a2 + "ngd har paketet?");
+		String bs = JOptionPane.showInputDialog(null, "Vilken bredd har paketet?");
+		String ts = JOptionPane.showInputDialog(null, "Vilken tjocklek har paketet?");
+		double ld = Double.parseDouble(ls);
+		double bd = Double.parseDouble(bs);
+		double td = Double.parseDouble(ts);
+		if(140<=ld && ld<=600 && 90<=bd && td<=100 && ld+bd+td<=900){
+			JOptionPane.showMessageDialog(null, "M" + a1 + "tten OK");
+		}else {
+			JOptionPane.showMessageDialog(null, "Felaktiga m" + a1 + "tt.");
 		}
 	}
 }
