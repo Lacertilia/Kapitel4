@@ -2,6 +2,7 @@ import javax.swing.*;
 /*
 Rasmus Mattas
 Uppgifter Kapitel 4
+19/9-17
 */
 public class Kapitel4{
 	public static void main(String[] args) {
@@ -60,7 +61,7 @@ public class Kapitel4{
 		}else {
 			JOptionPane.showMessageDialog(null, "Felaktiga m" + a1 + "tt.");
 		}*/
-		double min = Double.parseDouble(JOptionPane.showInputDialog(null, "Hur m" + a1 + "nga minuter pratade du i telefonen?"));
+		/*double min = Double.parseDouble(JOptionPane.showInputDialog(null, "Hur m" + a1 + "nga minuter pratade du i telefonen?"));
 		int button = JOptionPane.showConfirmDialog(null, "P" + a1 + "gick samtalet under dagtid?");
 		double price = 0;
 		if(button == 0){
@@ -71,6 +72,16 @@ public class Kapitel4{
 			JOptionPane.showMessageDialog(null, "Avbrutet!");
 			System.exit(1);
 		}
-		JOptionPane.showMessageDialog(null, "Kostnaden blev " + price + " kr!");
+		JOptionPane.showMessageDialog(null, "Kostnaden blev " + price + " kr!");*/
+		String p1 = JOptionPane.showInputDialog(null, "Vad " + a2 + "r f" + o1 + "rsta personens personnummer?\n" +a1+a1+a1+a1+"mmdd");
+		String p2 = JOptionPane.showInputDialog(null, "Vad " + a2 + "r andra personens personnummer?\n" +a1+a1+a1+a1+"mmdd");
+		p1 = p1.substring(5);
+		p2 = p2.substring(5);
+		if(p1.equals(p2)){
+			JOptionPane.showMessageDialog(null, "Ja, personerna fyller " + a1 + "r p" + a1 + " samma dag.");
+		}else {
+			JOptionPane.showMessageDialog(null, "Nej, personerna fyller inte " + a1 + "r p" + a1 + " samma dag.");
+		}
+
 	}
 }
