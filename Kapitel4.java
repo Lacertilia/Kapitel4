@@ -83,16 +83,28 @@ public class Kapitel4{
 		}else {
 			JOptionPane.showMessageDialog(null, "Nej, personerna fyller inte " + a1 + "r p" + a1 + " samma dag.");
 		}*/
-		Collator n = Collator.getInstance();
+		/*Collator n = Collator.getInstance();
 		n.setStrength(Collator.PRIMARY);
-		String n1 = JOptionPane.showInputDialog(null, "Vad heter f" + a1 + "rsta personen?\nEfternamn, F" + o1 + "rnamn");
+		String n1 = JOptionPane.showInputDialog(null, "Vad heter f" + o1 + "rsta personen?\nEfternamn, F" + o1 + "rnamn");
 		String n2 = JOptionPane.showInputDialog(null, "Vad heter andra personen?\nEfternamn, F" + o1 + "rnamn");
 		if(n.compare(n1, n2) > 0){
-			JOptionPane.showMessageDialog(null, n2 + "\n" + n1);
+			JOptionPane.showMessageDialog(null, n2 + "\n" + n1); 
 		}else if(n.compare(n1, n2) < 0){
 			JOptionPane.showMessageDialog(null, n1 + "\n" + n2);
 		}else {
 			JOptionPane.showMessageDialog(null, n1 + " och " + n2 + " kommer samtidigt i alfabetet.");
+		}*/
+		String pns = JOptionPane.showInputDialog(null, "Personnummer:\n" + a1+a1+a1+a1 + "mmddxxxx");
+
+		switch(pns.charAt(10)){
+			case '1': case '3': case '5': case '7': case '9':
+			JOptionPane.showMessageDialog(null, "Personen " + a2 + "r en man.");
+			break;
+			case '2': case '4': case '6': case '8': case '0':
+			JOptionPane.showMessageDialog(null, "Personen " + a2 + "r en kvinna.");
+			break;
+			default:
+			JOptionPane.showMessageDialog(null, "Ingen siffra!");
 		}
 	}
 }
